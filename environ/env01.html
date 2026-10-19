@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Raspberry World</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --blue-raspberry: #00b4d8;
+            --deep-berry: #6cacff;
+            --neon-pink: #ec81b6;
+            --electric-blue: #90e0ef;
+        }
+
+        body {
+            font-family: 'Papyrus', 'Comic Sans MS', sans-serif;
+            background-color: var(--deep-berry);
+            color: #83b0ff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        .hero-container {
+            position: relative;
+            width: 90%;
+            max-width: 1000px;
+            height: 600px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 180, 216, 0.5);
+            border: 4px solid var(--blue-raspberry);
+            
+
+            background-image: linear-gradient(rgba(3, 4, 94, 0.6), rgba(0, 168, 229, 0.8)), url("../images/background.jpg");
+            background-size: cover;
+            background-position: center;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: var(--electric-blue);
+            text-shadow: 3px 3px 0px var(--neon-pink), 0 0 20px rgba(0, 180, 216, 0.8);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: #7ad0ff;
+            text-shadow: 1px 1px 5px #000;
+            max-width: 600px;
+        }
+
+        .overlay-image {
+            position: absolute;
+            border-radius: 12px;
+            border: 3px solid var(--neon-pink);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+            object-fit: cover;
+        }
+
+        .overlay-image:hover {
+            transform: scale(1.1) rotate(0deg) !important;
+            z-index: 10;
+        }
+
+    
+        .img-left {
+            width: 150px;
+            height: 150px;
+            bottom: -30px;
+            left: -30px;
+        }
+
+        .img-right {
+            width: 180px;
+            height: 180px;
+            top: -40px;
+            right: -20px;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .img-left { width: 100px; height: 100px; bottom: -10px; left: -10px; }
+            .img-right { width: 110px; height: 110px; top: -20px; right: -10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-container">
+        <!-- Main Content -->
+        <h1>Blue Raspberry</h1>
+        <p>welcome to the home of blue raspberry! Here you will smell the sweet scent of blue raspberry, and feast your eyes upon its vibrant beauty.</p>
+
+        
+        <img class="overlay-image img-left" src="../images/candy.jpg" alt="Secondary Left">
+        <img class="overlay-image img-right" src="../images/realfruit.jpeg" alt="Secondary Right">
+    </div>
+
+</body>
+</html>
