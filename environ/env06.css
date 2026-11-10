@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue-raspberry: #00b4d8;
+    --neon-pink: #ff007f;
+    --electric-blue: #90e0ef;
+}
+
+body {
+    font-family: 'Papyrus', 'Comic Sans MS', sans-serif;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.hero-container {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    height: 600px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 180, 216, 0.5);
+    border: 4px solid var(--blue-raspberry);
+    
+
+    background-image: linear-gradient(rgba(3, 4, 94, 0.6), rgba(3, 4, 94, 0.8)), url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+
+h1 {
+    font-size: 3.5rem;
+    color: var(--electric-blue);
+    text-shadow: 3px 3px 0px var(--neon-pink), 0 0 20px rgba(0, 180, 216, 0.8);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px #000;
+    max-width: 600px;
+}
+
+
+.overlay-image {
+    position: absolute;
+    border-radius: 12px;
+    border: 3px solid var(--neon-pink);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.overlay-image:hover {
+    transform: scale(1.1) rotate(0deg) !important;
+    z-index: 10;
+}
+
+
+.img-left {
+    width: 150px;
+    height: 150px;
+    bottom: -30px;
+    left: -30px;
+  
+}
+
+.img-right {
+    width: 180px;
+    height: 180px;
+    top: -40px;
+    right: -20px;
+  
+}
+
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    .img-left { width: 100px; height: 100px; bottom: -10px; left: -10px; }
+    .img-right { width: 110px; height: 110px; top: -20px; right: -10px; }
+}
+
+#give-button {
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    font-family: "Papyrus", "Comic Sans MS", cursive, sans-serif;
+    padding: 20px;
+    background-color: #fff0f5;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: max-content;
+    margin: 20px auto;
+}
+
+#give-button {
+    font-family: "Papyrus", "Comic Sans MS", cursive, sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, #4da6ff, #0066cc); 
+    border: none;
+    border-radius: 25px; 
+    padding: 12px 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 102, 204, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#give-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 102, 204, 0.3);
+}
+
+#give-button:active {
+    transform: scale(0.98);
+}
+
+#blue_raspberry-count {
+    font-size: 0.95rem;
+    color: #555555;
+    font-style: italic;
+    background-color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 12px;
+    border: 1px dashed #4da6ff;
+}
+
+#raspberry-area {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.blue-raspberry {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+

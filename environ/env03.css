@@ -22,7 +22,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Hero Wrapper with Main Background Image */
 .hero-container {
     position: relative;
     width: 90%;
@@ -32,8 +31,8 @@ body {
     box-shadow: 0 0 30px rgba(0, 180, 216, 0.5);
     border: 4px solid var(--blue-raspberry);
     
-    /* PLACE YOUR MAIN BACKGROUND IMAGE HERE */
-    background-image: linear-gradient(rgba(3, 4, 94, 0.6), rgba(3, 4, 94, 0.8)), url('https://placeholder.com');
+
+    background-image: linear-gradient(rgba(3, 4, 94, 0.6), rgba(3, 4, 94, 0.8)), url("../images/background.jpg");
     background-size: cover;
     background-position: center;
     
@@ -45,7 +44,7 @@ body {
     padding: 20px;
 }
 
-/* Typography */
+
 h1 {
     font-size: 3.5rem;
     color: var(--electric-blue);
@@ -61,7 +60,7 @@ p {
     max-width: 600px;
 }
 
-/* Layered Secondary Images on Top */
+
 .overlay-image {
     position: absolute;
     border-radius: 12px;
@@ -76,13 +75,13 @@ p {
     z-index: 10;
 }
 
-/* Positioning Secondary Images */
+
 .img-left {
     width: 150px;
     height: 150px;
     bottom: -30px;
     left: -30px;
-    transform: rotate(-10deg);
+  
 }
 
 .img-right {
@@ -90,12 +89,86 @@ p {
     height: 180px;
     top: -40px;
     right: -20px;
-    transform: rotate(15deg);
+  
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     h1 { font-size: 2.5rem; }
     .img-left { width: 100px; height: 100px; bottom: -10px; left: -10px; }
     .img-right { width: 110px; height: 110px; top: -20px; right: -10px; }
 }
+
+<style>
+  #give-button {
+    margin-left: 50px;  
+    margin-top: 20px;   
+  }
+</style>
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    font-family: "Papyrus", "Comic Sans MS", cursive, sans-serif;
+    padding: 20px;
+    background-color: #fff0f5; /* Soft pastel pink background */
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: max-content;
+    margin: 20px auto;
+}
+
+#give-button {
+    font-family: "Papyrus", "Comic Sans MS", cursive, sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, #4da6ff, #0066cc); /* Vibrant blue raspberry gradient */
+    border: none;
+    border-radius: 25px; /* Rounded pill shape for a cute look */
+    padding: 12px 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 102, 204, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#give-button:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 102, 204, 0.3);
+}
+
+#give-button:active {
+    transform: scale(0.98); 
+}
+
+#blue_raspberry-count {
+    font-size: 0.95rem;
+    color: #555555;
+    font-style: italic;
+    background-color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 12px;
+    border: 1px dashed #4da6ff; }
+
+    #raspberry-area {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.blue-raspberry {
+  position: absolute;
+  width: 50px; 
+  height: 50px;
+}
+
+#raspberry-area {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
